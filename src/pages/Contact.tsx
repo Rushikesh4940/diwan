@@ -127,8 +127,9 @@ export function Contact() {
             ) : (
               <p>
                 <strong>This is a demo.</strong> The forms on this concept site check what you type in your browser and then
-                stop. Nothing is sent, stored, or shared, and the site itself uses no cookies or analytics. The branch
-                map is embedded from Google Maps, which applies Google’s own privacy policy.
+                stop. Nothing is sent, stored, or shared, and the site sets no cookies. Anonymous page-view counts are
+                collected with Vercel Web Analytics, which uses no cookies and does not identify you. The branch map is
+                embedded from Google Maps, which applies Google’s own privacy policy.
               </p>
             )}
             <p>

@@ -21,7 +21,7 @@ A multi-page website concept for **Diwan Auto Care LLP**, a family-run tyre, bat
 
 ## Stack
 
-React 19, TypeScript, Vite 8, Tailwind CSS 4, React Router 7 and Lucide icons. There is no animation library: motion is CSS plus one IntersectionObserver, and it all respects `prefers-reduced-motion`.
+React 19, TypeScript, Vite 8, Tailwind CSS 4, React Router 7, Lucide icons and Vercel Web Analytics. There is no animation library: motion is CSS plus one IntersectionObserver, and it all respects `prefers-reduced-motion`.
 
 ```
 src/
@@ -53,6 +53,7 @@ The project is ready as-is: `vercel.json` adds the SPA rewrites, long-lived cach
 1. Push the repository to GitHub.
 2. In Vercel, choose **Add New → Project** and import the repository. The framework preset is detected as **Vite**, with build command `npm run build` and output directory `dist`.
 3. Deploy. No environment variables are needed for the demo.
+4. Optional: in the Vercel project, open **Analytics** and click **Enable** to start collecting page views (cookieless; the `<Analytics />` component is already in `src/main.tsx`).
 
 Or from the CLI: `npm i -g vercel && vercel` (preview), then `vercel --prod`.
 
