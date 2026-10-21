@@ -31,10 +31,3 @@ dist-ssr
 .vercel
 dist
 
-# local AI-agent tooling and skills (not part of the site)
-.claude
-.agents
-.codex
-.aider-desk
-.impeccable
-skills-lock.json

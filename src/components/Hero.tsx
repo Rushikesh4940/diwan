@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react'
 import { branches, business } from '../data/business'
 import { stagger } from '../lib/style'
 
-const SIDEWALL = `DIWAN AUTO CARE · SINCE ${business.founded} · TYRES · WHEELS · BATTERIES · ALIGNMENT · BALANCING · THANE · BHIWANDI · MUMBAI · `
+const SIDEWALL = `DIWAN AUTO CARE · SINCE ${business.founded} · TYRES · WHEELS · BATTERIES · ALIGNMENT · BALANCING · THANE · BHIWANDI · YOUR SAFETY PARTNER · `
 
 const WHEEL_LETTERING = 'TUBELESS RADIAL · DIWAN AUTO CARE · '
 
@@ -193,7 +193,6 @@ export function Tyre({ className = '' }: { className?: string }) {
 }
 
 export function Hero() {
-  const cities = new Set(branches.map((b) => b.city)).size
   return (
     <section className="relative overflow-hidden bg-ground" aria-labelledby="hero-title">
       <div className="frame relative z-10 flex flex-col pt-10 lg:min-h-[min(calc(100svh-108px),900px)] lg:justify-center lg:py-20">
@@ -207,8 +206,8 @@ export function Hero() {
             </span>
           </h1>
           <p className="hero-line lead mt-6 max-w-[34ch] lg:mt-9" style={stagger(2)}>
-            Diwan Auto Care fits tyres, aligns and balances wheels and replaces batteries for cars and bikes, at six
-            branches across Thane, Bhiwandi and Mumbai.
+            Diwan Auto Care fits tyres, aligns and balances wheels and replaces batteries for cars and bikes, at four
+            branches across Thane and Bhiwandi.
           </p>
           <div className="hero-line mt-8 flex flex-wrap gap-3 lg:mt-9" style={stagger(3)}>
             <Link to="/services" className="btn btn-primary">
@@ -219,8 +218,7 @@ export function Hero() {
             </Link>
           </div>
           <p className="hero-line small mt-7 max-w-[40ch] text-muted lg:mt-8" style={stagger(4)}>
-            Family-run · {branches.length} branches in {cities} cities · Michelin Tyre &amp; Service partner store in
-            Oshiwara
+            Family-run since {business.founded} · {branches.length} branches · Headquarters in Anand Nagar, Thane
           </p>
         </div>
       </div>

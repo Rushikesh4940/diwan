@@ -1,6 +1,6 @@
 # Diwan Auto Care — independent website concept
 
-A multi-page website concept for **Diwan Auto Care LLP**, a family-run tyre, battery and wheel-service business with six branches in Thane, Bhiwandi and Jogeshwari West (Mumbai).
+A multi-page website concept for **Diwan Auto Care LLP**, a family-run tyre, battery and wheel-service business with four branches: Anand Nagar (headquarters), Pawar Nagar and Kothari Compound in Thane, and Gopal Nagar in Bhiwandi.
 
 > **This is not the official website of Diwan Auto Care LLP**, and it was not commissioned, approved or endorsed by the business. It is a freelance proposal piece. The official site is [diwanautocare.com](https://diwanautocare.com). The deployment is set to `noindex`, and every page says it is a concept.
 
@@ -8,11 +8,11 @@ A multi-page website concept for **Diwan Auto Care LLP**, a family-run tyre, bat
 
 | Route | Page |
 | --- | --- |
-| `/` | Home: hero, the 2019 merger story, services, tyre-size reader, the Oshiwara Michelin store, branches, enquiry form |
+| `/` | Home: animated hero wheel, the 2019 merger story, services, tyre-size reader, tyre-check advice, branches, enquiry form |
 | `/services` | Ten services in two categories, each with what's included, why it matters, and enquiry/booking links |
 | `/about` | Timeline, values, brands stocked |
 | `/workshop` | Filterable gallery with lightbox (each photo's credit shows in the lightbox) |
-| `/contact` | Click-to-call for all six branches, branch finder with an embedded Google Map, enquiry form, privacy notice |
+| `/contact` | Click-to-call for all four branches, branch finder with an embedded Google Map, enquiry form, privacy notice |
 | `/book` | Visit request form: service, branch, date, time slot, vehicle |
 
 **The one live feature:** the tyre-size reader (home and services). Type a sidewall code such as `205/55 R16 91V` and it explains each part: tread width, sidewall height, rim, load in kg, speed in km/h and overall diameter. It also draws the tyre to scale. Its button opens the enquiry form with the size already filled in.
@@ -75,8 +75,9 @@ The function validates again on the server, drops honeypot submissions, escapes 
 
 All business facts live in `src/data/business.ts`, each with its source. They were collected on 21 Oct 2026 from:
 
-- **Official website** (diwanautocare.com: home, About, Services, Contact). Used for: the six branch addresses and phone numbers, `custcare@` email, family ownership, the April 2019 merger of Tyre Best, Battery Best Sales-N-Service and Auto Care Centre, "more than 50" team members, the values honesty/expertise/quality, the services list, brands stocked, the tagline, the three-month tyre inspection advice, and the Instagram and Facebook links.
-- **Michelin India press release, 8 Oct 2025.** Used for: founded in 1978; the Oshiwara Michelin Tyre & Service store as Mumbai's largest MTS store; 400 sq ft showroom, 3,100 sq ft service area, 4 bays, 2 lifts, a pit, Hunter alignment and Hunter Road Force balancing; brakes as a service.
+- **Site owner (21 Oct 2026)**, from the company's own location listing. Used for: the four locations and their addresses, and Anand Nagar as headquarters.
+- **Official website** (diwanautocare.com: home, About, Services, Contact). Used for: shop numbers and branch phone numbers, `custcare@` email, family ownership, the April 2019 merger of Tyre Best, Battery Best Sales-N-Service and Auto Care Centre, "more than 50" team members, the values honesty/expertise/quality, the services list, brands stocked, the tagline, the three-month tyre inspection advice, and the Instagram and Facebook links.
+- **Michelin India press release, 8 Oct 2025.** Used for: founded in 1978, and brakes as a service. The release also describes an Oshiwara (Jogeshwari West) Michelin store run with Diwan Auto Care; it is left out because the site owner confirmed only the four locations above.
 - **TyrePlex dealer listings.** Used for: opening hours of 10 am – 8 pm daily, which are shown as "listed publicly" with a prompt to call ahead.
 
 Nothing else was invented: there are no testimonials, ratings, customer counts, awards or prices. The official site does carry customer testimonials, but they were left out until the business agrees to their reuse.
@@ -86,11 +87,11 @@ Nothing else was invented: there are no testimonials, ratings, customer counts, 
 1. **Founding year and years in business.** Michelin says 1978. The official site says "more than 40 years" on its About page and "over 30 years" on its home page.
 2. **Opening hours** for each branch. The 10 am – 8 pm figure comes from a third-party listing for two branches only, and it also limits the booking time slots.
 3. **WhatsApp number.** None is published. The contact page shows a placeholder, and adding one only needs `business.whatsapp` set in `business.ts`.
-4. **Phone numbers.** Three branches share +91 91370 74742. Confirm that is intended, and which number the header should show.
-5. **Anand Nagar address.** The official site says shop 13–16; TyrePlex lists shop 16 at "Anand Nagar, GB Road".
+4. **Phone numbers.** Taken from the official contact page. Confirm each is current; the header shows the Anand Nagar headquarters number.
+5. **Addresses.** Shop and unit numbers come from the official site; Bhiwandi is on Old Agra Road per the company listing, while the old site says Old Wada Road.
 6. **Brand list.** The official site's logo file reads "amron"; this concept shows **Amaron**. Confirm the brands currently stocked.
 7. **Service descriptions.** The "What's included" and "Why it matters" copy was written for the concept from the official descriptions. Roadside assistance is limited to what the official list names (phone assistance, spare-tyre fitting, battery charging).
-8. **Team size.** The official site says more than 50; Michelin says 70+ trained professionals at the Oshiwara store.
+8. **Team size.** The official site says more than 50.
 9. **Logo.** The concept uses a text wordmark on purpose and does not reproduce the registered logo. Swap in the official mark with permission.
 10. **Photography.** Every photograph is an illustrative Wikimedia Commons image, credited in the gallery lightbox. Replace them with the business's own photos of its branches, bays and team.
 11. **Privacy notice.** Have it reviewed against the DPDP Act 2023 before forms go live.

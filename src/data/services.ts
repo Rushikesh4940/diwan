@@ -3,7 +3,7 @@ import type { clips } from './clips'
 
 /*
   Services and products. Every service listed here is named by the business on
-  its official site or in the Michelin India press release. The "includes" and
+  its official site (brakes are also named in a Michelin India release). The "includes" and
   "why it matters" copy is written for this concept from those descriptions and
   general tyre-care practice; the business should review it before launch.
 */
@@ -81,7 +81,7 @@ export const services: Service[] = [
     name: 'Wheel alignment',
     category: 'tyres-wheels',
     photo: 'alignmentClamp',
-    fact: 'Hunter alignment at the Oshiwara store',
+    fact: 'Toe, camber and axle geometry set to spec',
     summary:
       'Setting toe, camber and the geometry of every axle so the car tracks straight and the tyres wear evenly.',
     includes: [
@@ -98,7 +98,7 @@ export const services: Service[] = [
     name: 'Wheel balancing',
     category: 'tyres-wheels',
     photo: 'balancing',
-    fact: 'Hunter Road Force balancing at Oshiwara',
+    fact: 'No shake through the steering at speed',
     summary:
       'Balancing the weight of each tyre and wheel so it turns smoothly at speed, without vibration through the steering.',
     includes: ['Spin test of each wheel', 'Weights fitted where the assembly is light', 'Re-check after correction'],

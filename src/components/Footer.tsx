@@ -96,7 +96,7 @@ export function Footer() {
               </address>
             ))}
             <Link to="/contact#branches" className="link text-base">
-              All six branches
+              All four branches
             </Link>
           </div>
         </div>

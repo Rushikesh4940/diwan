@@ -10,7 +10,7 @@ import { LIVE } from '../lib/submit'
 export function Contact() {
   useSeo(
     'Contact and branches',
-    'Phone numbers, addresses and map links for all six Diwan Auto Care branches in Thane, Bhiwandi and Jogeshwari West, plus an enquiry form.',
+    'Phone numbers, addresses and map links for all four Diwan Auto Care branches in Thane and Bhiwandi, plus an enquiry form.',
   )
   return (
     <>
@@ -20,7 +20,7 @@ export function Contact() {
             Call, visit or write
           </h1>
           <p className="hero-line lead mt-6 max-w-[36ch]" style={stagger(1)}>
-            Six branches, each with its own number. Calling the branch nearest you is the quickest way to check stock and
+            Four branches, each with its own number. Calling the branch nearest you is the quickest way to check stock and
             prices.
           </p>
           <ul className="hero-line mt-9 grid gap-3 sm:max-w-[440px]" style={stagger(2)}>
@@ -28,7 +28,7 @@ export function Contact() {
               <a href={telHref(primaryPhone)} className="btn btn-primary w-full justify-start whitespace-nowrap tabular">
                 <Phone size={18} aria-hidden="true" /> {primaryPhone}
               </a>
-              <p className="small mt-2 text-muted">Anand Nagar, Chandanwadi and Jogeshwari West share this number.</p>
+              <p className="small mt-2 text-muted">Headquarters, Anand Nagar. Each branch's own number is below.</p>
             </li>
             <li>
               <a href={`mailto:${business.email}`} className="btn btn-quiet w-full justify-start">
@@ -58,7 +58,7 @@ export function Contact() {
           <div data-reveal className="grid items-end gap-8 md:grid-cols-12 md:gap-6">
             <div className="md:col-span-6">
               <h2 id="branches-title" className="h-section">
-                All six branches
+                All four branches
               </h2>
               <p className="mt-5 max-w-[44ch]">
                 Opening hours listed publicly: {business.hours.toLowerCase()}. Please call ahead to confirm, especially
@@ -70,7 +70,7 @@ export function Contact() {
                 <div className="disc">
                   <Photo name="ghodbunder" sizes="220px" />
                 </div>
-                <figcaption className="small mt-2 text-muted">Ghodbunder Road, home of the Anand Nagar branch</figcaption>
+                <figcaption className="small mt-2 text-muted">Ghodbunder Road, home of the Anand Nagar headquarters</figcaption>
               </figure>
               <figure className="w-1/2 max-w-[220px]">
                 <div className="disc">
@@ -80,13 +80,12 @@ export function Contact() {
               </figure>
             </div>
           </div>
-          <ul data-reveal className="mt-14 grid gap-x-12 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
+          <ul data-reveal className="mt-14 grid gap-x-10 gap-y-14 md:grid-cols-2 xl:grid-cols-4">
             {branches.map((b) => (
               <li key={b.id} id={`branch-${b.id}`} className="scroll-mt-28">
                 <p className="small font-semibold text-accent">{b.city}</p>
                 <h3 className="h-item mt-1">{b.name}</h3>
                 <address className="mt-3 max-w-[40ch] text-base not-italic leading-snug">{b.address}</address>
-                {b.note && <p className="mt-2 text-base text-muted">{b.note}</p>}
                 <div className="mt-5 flex flex-wrap gap-2">
                   <a href={telHref(b.phone)} className="btn btn-primary !min-h-[44px] !px-4 text-base tabular">
                     <Phone size={16} aria-hidden="true" /> {b.phone}

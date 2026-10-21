@@ -4,8 +4,8 @@ import { PageHeader } from '../components/PageHeader'
 import { Photo } from '../components/Photo'
 import { Clip } from '../components/Clip'
 import { TyreDecoder } from '../components/TyreDecoder'
+import { InspectionBand } from '../components/InspectionBand'
 import { categories, services, type Service } from '../data/services'
-import { oshiwaraStore } from '../data/business'
 import { useSeo } from '../lib/useSeo'
 
 /* Overview: a two-column menu with photo bullets, one block per category. */
@@ -115,8 +115,7 @@ export function Services() {
         photo="alignmentClamp"
         intro={
           <>
-            Ten services across tyres, wheels and batteries, with {oshiwaraStore.equipment[0]} and{' '}
-            {oshiwaraStore.equipment[1]} at the Oshiwara store.
+            Ten services across tyres, wheels and batteries, at four branches in Thane and Bhiwandi.
           </>
         }
       >
@@ -143,27 +142,7 @@ export function Services() {
         </div>
       </section>
 
-      <section className="bg-accent text-paper-ink" aria-labelledby="check-title">
-        <div className="frame section grid items-center gap-10 md:grid-cols-12 md:gap-6">
-          <div data-reveal className="md:col-span-7">
-            <h2 id="check-title" className="h-section">
-              Check your tyres every three months
-            </h2>
-            <p className="lead mt-6 max-w-[42ch]">
-              That is the interval Diwan Auto Care recommends: tread depth, pressure, cuts on the sidewall, and the wear
-              pattern that shows when alignment is off.
-            </p>
-            <Link to="/book?service=wheel-alignment" className="btn btn-dark mt-9">
-              Book a tyre check <ArrowRight size={18} className="arrow" aria-hidden="true" />
-            </Link>
-          </div>
-          <div className="on-accent md:col-span-4 md:col-start-9">
-            <div className="disc mx-auto w-[70vw] max-w-[420px] md:w-full">
-              <Photo name="wornTread" sizes="(min-width: 768px) 30vw, 70vw" />
-            </div>
-          </div>
-        </div>
-      </section>
+      <InspectionBand />
 
       <TyreDecoder />
     </>

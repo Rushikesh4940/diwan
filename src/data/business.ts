@@ -12,6 +12,7 @@ export const SOURCES = {
   officialContact: 'https://diwanautocare.com/contact/',
   officialAbout: 'https://diwanautocare.com/about-us/',
   officialServices: 'https://diwanautocare.com/services-offered/',
+  // Source of the founding year only.
   michelin: 'https://www.michelin.in/news/michelin-india-mumbai-largest-mts-store-diwan-auto-care',
   tyreplex: 'https://www.tyreplex.com/tyre-dealers-in-ozar/diwan-auto-care-llp_1',
 } as const
@@ -61,89 +62,54 @@ export const business = {
   ],
 } as const
 
-/* Oshiwara store facts: Michelin India press release, 8 Oct 2025. */
-export const oshiwaraStore = {
-  launched: 'October 2025',
-  showroomSqFt: 400,
-  serviceAreaSqFt: 3100,
-  bays: 4,
-  lifts: 2,
-  pit: 1,
-  equipment: ['Hunter wheel alignment', 'Hunter Road Force wheel balancing'],
-} as const
-
 export type Branch = {
   id: string
   name: string
   area: string
-  city: 'Thane' | 'Bhiwandi' | 'Mumbai'
+  city: 'Thane' | 'Bhiwandi'
   address: string
   phone: string
-  note?: string
-  /* Schematic position on the branch map, 0–100 in each axis. Not to scale. */
-  map: { x: number; y: number }
+  hq?: boolean
 }
 
-/* Addresses and numbers: official contact page. */
+/*
+  The business's four locations, as confirmed by the site owner on 21 Oct 2026
+  (from the company's own location listing). Shop numbers and phone numbers
+  are from the official contact page.
+*/
 export const branches: Branch[] = [
   {
     id: 'anand-nagar',
     name: 'Anand Nagar',
-    area: 'Ghodbunder Road',
+    area: 'Kasarvadavli · Headquarters',
     city: 'Thane',
-    address:
-      'Shop 13–16, Sagar Residency, opp. Grand Square, near Kasarvadavli police station, behind DMart, Ghodbunder Road, Thane West 400615',
+    address: 'Shop 13–16, Sagar Residency, Anand Nagar, Kasarvadavli, Ghodbunder Road, Thane West 400615',
     phone: '+91 91370 74742',
-    map: { x: 51, y: 22 },
+    hq: true,
+  },
+  {
+    id: 'pawar-nagar',
+    name: 'Pawar Nagar',
+    area: 'Vasant Vihar',
+    city: 'Thane',
+    address: 'A1 – 003/004/005, Harasiddh Park, Pawar Nagar, Vasant Vihar, Thane West 400610',
+    phone: '+91 98694 40371',
   },
   {
     id: 'kothari-compound',
     name: 'Kothari Compound',
     area: 'Manpada',
     city: 'Thane',
-    address:
-      'Godown 1C, 27 Acres, Kothari Compound, near Happy Valley Circle, Tikujiniwadi Road, Manpada, Thane West 400610',
+    address: 'Godown 1C, 27 Acres, Kothari Compound, Tikujiniwadi, Manpada, Thane West 400610',
     phone: '+91 99302 88585',
-    map: { x: 49, y: 37 },
-  },
-  {
-    id: 'pawar-nagar',
-    name: 'Pawar Nagar',
-    area: 'opp. Hiranandani Meadows',
-    city: 'Thane',
-    address:
-      'A1 – 003/004/005, Harasiddh Park, Pawar Nagar, street opp. Hiranandani Meadows, Thane West 400610',
-    phone: '+91 98694 40371',
-    map: { x: 53, y: 47 },
-  },
-  {
-    id: 'chandanwadi',
-    name: 'Chandanwadi',
-    area: 'Almeda Road',
-    city: 'Thane',
-    address: 'Shop 2–3, Akshata Apartment, Almeda Road, Chandanwadi, Thane West 400601',
-    phone: '+91 91370 74742',
-    map: { x: 55, y: 58 },
   },
   {
     id: 'bhiwandi',
-    name: 'Bhiwandi',
-    area: 'Old Wada Road',
+    name: 'Gopal Nagar',
+    area: 'Bhiwandi',
     city: 'Bhiwandi',
-    address:
-      'D3, Shop 32–34, Gopal Nagar, Rajiv Gandhi Chowk, opp. Beni Prasad petrol pump, Old Wada Road, Bhiwandi 421302',
+    address: 'D3, Shop 32–34, Gopal Nagar, Rajiv Gandhi Chowk, Old Agra Road, Bhiwandi 421302',
     phone: '+91 73502 20046',
-    map: { x: 86, y: 14 },
-  },
-  {
-    id: 'jogeshwari',
-    name: 'Jogeshwari West',
-    area: 'Oshiwara',
-    city: 'Mumbai',
-    address: 'Gala 4, Sadhna Industrial Estate, near Oshiwara Plaza, Jogeshwari West, Mumbai 400102',
-    phone: '+91 91370 74742',
-    note: 'Michelin Tyre & Service store, opened with Michelin India in October 2025.',
-    map: { x: 14, y: 82 },
   },
 ]
 
@@ -152,5 +118,5 @@ export const telHref = (phone: string) => `tel:${phone.replace(/[^\d+]/g, '')}`
 export const mapsHref = (address: string) =>
   `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`Diwan Auto Care, ${address}`)}`
 
-/* Primary number for the header call button: the number shared by three branches. */
+/* Primary number for the header call button: the Anand Nagar headquarters. */
 export const primaryPhone = '+91 91370 74742'

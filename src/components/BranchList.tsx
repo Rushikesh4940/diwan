@@ -4,7 +4,7 @@ import { branches, business, mapsHref, telHref } from '../data/business'
 
 type Props = { headingLevel?: 2 | 3; withPhoto?: boolean; id?: string }
 
-/* The six branches, as a directory: name, area, number and a map link. */
+/* The four branches, as a directory: name, area, number and a map link. */
 export function BranchList({ headingLevel = 2, withPhoto = true, id = 'branches' }: Props) {
   const H = headingLevel === 2 ? 'h2' : 'h3'
   return (
@@ -12,10 +12,10 @@ export function BranchList({ headingLevel = 2, withPhoto = true, id = 'branches'
       <div className="grid gap-12 lg:grid-cols-12 lg:gap-6">
         <div data-reveal className="lg:col-span-4">
           <H id={`${id}-title`} className="h-section">
-            Six branches
+            Four branches
           </H>
           <p className="mt-5 max-w-[34ch]">
-            Four in Thane West, one on Old Wada Road in Bhiwandi, and the Michelin store in Jogeshwari West.
+            Three in Thane West, with the headquarters at Anand Nagar, and one at Gopal Nagar in Bhiwandi.
           </p>
           <p className="small mt-4 text-muted">Opening hours listed publicly: {business.hours.toLowerCase()}. Call ahead to confirm.</p>
           {withPhoto && (
@@ -24,7 +24,7 @@ export function BranchList({ headingLevel = 2, withPhoto = true, id = 'branches'
                 <Photo name="ghodbunder" sizes="26vw" />
               </div>
               <figcaption className="small mt-3 max-w-[30ch] text-muted">
-                Ghodbunder Road, the highway the Anand Nagar branch stands on.
+                Ghodbunder Road, the highway the Anand Nagar headquarters stands on.
               </figcaption>
             </figure>
           )}
@@ -39,7 +39,6 @@ export function BranchList({ headingLevel = 2, withPhoto = true, id = 'branches'
               </div>
               <p className="mt-1 text-base font-semibold text-accent">{b.area}</p>
               <address className="mt-3 text-base not-italic leading-snug text-ink">{b.address}</address>
-              {b.note && <p className="mt-3 text-base text-muted">{b.note}</p>}
               <div className="mt-5 flex flex-wrap gap-2">
                 <a href={telHref(b.phone)} className="btn btn-primary !min-h-[44px] !px-4 text-base tabular">
                   <Phone size={16} aria-hidden="true" /> {b.phone}

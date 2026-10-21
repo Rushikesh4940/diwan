@@ -20,7 +20,7 @@ export type Photo = {
   licence: string
   licenceUrl: string
   page: string
-  category: 'Tyres' | 'Wheels' | 'Batteries & brakes' | 'Thane & Mumbai'
+  category: 'Tyres' | 'Wheels' | 'Batteries & brakes' | 'Thane'
 }
 
 const BY_SA_2 = 'https://creativecommons.org/licenses/by-sa/2.0/'
@@ -115,7 +115,7 @@ export const photos = {
     width: 1920, height: 1440, sizes: [640, 1280, 1920],
     title: 'Ghodbunder Road (SH 42)', creator: 'Dinesh Valke',
     licence: 'CC BY-SA 2.0', licenceUrl: BY_SA_2,
-    page: 'https://commons.wikimedia.org/w/index.php?curid=51599802', category: 'Thane & Mumbai',
+    page: 'https://commons.wikimedia.org/w/index.php?curid=51599802', category: 'Thane',
   },
   thane: {
     slug: 'thane-yeoor',
@@ -123,7 +123,7 @@ export const photos = {
     width: 1920, height: 1080, sizes: [640, 1280, 1920],
     title: 'Thane city, from Yeoor Hills', creator: 'Dinesh Valke',
     licence: 'CC BY-SA 2.0', licenceUrl: BY_SA_2,
-    page: 'https://commons.wikimedia.org/w/index.php?curid=112348677', category: 'Thane & Mumbai',
+    page: 'https://commons.wikimedia.org/w/index.php?curid=112348677', category: 'Thane',
   },
 } satisfies Record<string, Photo>
 

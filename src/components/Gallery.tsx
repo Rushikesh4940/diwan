@@ -4,7 +4,7 @@ import { Photo } from './Photo'
 import { photoSrc } from '../lib/photo'
 import { allPhotos, type Photo as PhotoData } from '../data/images'
 
-const filters = ['All', 'Tyres', 'Wheels', 'Batteries & brakes', 'Thane & Mumbai'] as const
+const filters = ['All', 'Tyres', 'Wheels', 'Batteries & brakes', 'Thane'] as const
 type Filter = (typeof filters)[number]
 
 /* Full-size view in a native modal dialog: focus is trapped and restored by the browser. */

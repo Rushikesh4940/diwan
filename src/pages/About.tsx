@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { PageHeader } from '../components/PageHeader'
 import { Photo } from '../components/Photo'
-import { branches, business, oshiwaraStore } from '../data/business'
+import { branches, business } from '../data/business'
 import { useSeo } from '../lib/useSeo'
 
 const milestones = [
@@ -24,12 +24,6 @@ const milestones = [
     what: 'One firm: Diwan Auto Care LLP',
     text: 'The three businesses merge, so tyres, batteries and wheel service sit under one name and one roof.',
   },
-  {
-    photo: 'alignmentBay' as const,
-    when: oshiwaraStore.launched,
-    what: 'Michelin Tyre & Service, Oshiwara',
-    text: `Michelin India opens its largest MTS store in Mumbai with Diwan Auto Care: ${oshiwaraStore.bays} bays, ${oshiwaraStore.lifts} lifts and a pit.`,
-  },
 ]
 
 const values = [
@@ -41,7 +35,7 @@ const values = [
 export function About() {
   useSeo(
     'About: a family business since 1978',
-    'Diwan Auto Care LLP is a family-owned tyre, battery and wheel-service business formed in 2019 from Tyre Best, Battery Best and Auto Care Centre, with six branches.',
+    'Diwan Auto Care LLP is a family-owned tyre, battery and wheel-service business formed in 2019 from Tyre Best, Battery Best and Auto Care Centre, with four branches in Thane and Bhiwandi.',
   )
   return (
     <>
@@ -140,7 +134,7 @@ export function About() {
             <h2 id="about-cta" className="h-section max-w-[18ch]">
               Visit the branch nearest you
             </h2>
-            <p className="lead mt-5 max-w-[40ch]">Four in Thane West, one in Bhiwandi and one in Jogeshwari West.</p>
+            <p className="lead mt-5 max-w-[40ch]">Three in Thane West and one in Bhiwandi.</p>
           </div>
           <div className="flex flex-wrap gap-3">
             <Link to="/contact#branches" className="btn btn-primary">
