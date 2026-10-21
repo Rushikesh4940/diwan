@@ -1,0 +1,7 @@
+# Independent concept deployment: keep it out of search indexes.
+# For a production launch on the business's own domain, replace with:
+#   User-agent: *
+#   Allow: /
+#   Sitemap: https://<domain>/sitemap.xml
+User-agent: *
+Disallow: /
